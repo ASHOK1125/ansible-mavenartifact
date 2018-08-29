@@ -1,6 +1,6 @@
 ---
 
-- hosts: "{{ group_name }}"
+- hosts: all
   gather_facts: false
   serial: "{{ serial_opts|default('1') }}"
 
