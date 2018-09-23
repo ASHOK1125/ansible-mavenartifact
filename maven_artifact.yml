@@ -1,1 +1,15 @@
+---
 
+- hosts: "{{ group_name }}"
+  gather_facts: false
+  serial: "{{ serial_opts|default('1') }}"
+
+  tasks:
+    - name: Download an artifact from nexus
+      maven_artifact:
+        group_id: com.company
+        artifact_id: web-app
+        extension: war
+        version: 4.11-SNAPSHOT
+        repository_url: 'http://nexus.example.com:8081/nexus/content/repositories/spring-snapshots'
+        dest: /tmp/web-app.war
