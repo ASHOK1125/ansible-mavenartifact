@@ -12,4 +12,6 @@
         extension: war
         version: 4.11-SNAPSHOT
         repository_url: 'http://nexus.example.com:8081/nexus/content/repositories/spring-snapshots'
+        username: user
+        password: pass
         dest: /tmp/web-app.war
